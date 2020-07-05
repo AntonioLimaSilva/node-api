@@ -5,7 +5,10 @@ const router = (server) => {
     server.use('/api/v1', router)
 
     const categoryService = require('../api/services/category-service')
+    const productService = require('../api/services/product-service')
+    
     categoryService.register(router, '/categories')
+    productService.register(router, '/products')
 }
 
 module.exports = router
